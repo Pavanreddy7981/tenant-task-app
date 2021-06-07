@@ -18,3 +18,11 @@
   color: orangered;
   text-align: center;
 }
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 50%;
+
+    margin: 25px auto;
+    align-items: center;
+  }
+}

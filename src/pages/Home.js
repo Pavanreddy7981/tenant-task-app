@@ -78,7 +78,7 @@ const Home = () => {
                             <Card 
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeswtRuJuLZpSyJ9p_y8df-kLf2emIgzyScBMtWHGkxUyxrcnNJjuCervTmTCMITgrKSU&usqp=CAU" 
                             title="BGV Document"/>
-                            <TextField style={{width:"50%"}} label="Comments" variant="outlined"/>
+                            <TextField style={{width:"60%"}} label="Comments" variant="outlined"/>
                         </div>
                         <div className="home__uploadsMainBottom">
                         <h4> Tenant Document</h4>

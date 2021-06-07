@@ -1,0 +1,35 @@
+[debug] [2021-06-07T03:04:15.149Z] ----------------------------------------------------------------------
+[debug] [2021-06-07T03:04:15.155Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pavanreddy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-06-07T03:04:15.156Z] CLI Version:   9.8.0
+[debug] [2021-06-07T03:04:15.156Z] Platform:      win32
+[debug] [2021-06-07T03:04:15.156Z] Node Version:  v14.15.1
+[debug] [2021-06-07T03:04:15.159Z] Time:          Mon Jun 07 2021 08:34:15 GMT+0530 (India Standard Time)
+[debug] [2021-06-07T03:04:15.160Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-07T03:04:15.184Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-07T03:04:15.186Z] > authorizing via signed-in user
+[debug] [2021-06-07T03:04:15.187Z] [iam] checking project task-app-e9220 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-06-07T03:04:15.193Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-06-07T03:04:15.194Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-07T03:04:15.719Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 07 Jun 2021 03:04:16 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-07T03:04:15.751Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/task-app-e9220:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-06-07T03:04:36.995Z] [iam] error while checking permissions, command may fail: FirebaseError: Server Error. connect ETIMEDOUT 142.250.193.170:443
+[debug] [2021-06-07T03:04:36.998Z] > refreshing access token with scopes: []
+[debug] [2021-06-07T03:04:36.998Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-06-07T03:04:37.503Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 07 Jun 2021 03:04:37 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-06-07T03:04:37.523Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/task-app-e9220 [none]
+[debug] [2021-06-07T03:04:58.636Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/task-app-e9220
+[debug] [2021-06-07T03:05:19.762Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/task-app-e9220
+    at Client.doRequest (C:\Users\Pavanreddy\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:211:19)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Client.request (C:\Users\Pavanreddy\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\Pavanreddy\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:289:21)
+    at async Object.getDefaultHostingSite (C:\Users\Pavanreddy\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\Pavanreddy\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\Pavanreddy\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:66:9)
+    at async C:\Users\Pavanreddy\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:161:17
+[error] 
+[error] Error: Failed to get Firebase project task-app-e9220. Please make sure the project exists and your account has permission to access it.

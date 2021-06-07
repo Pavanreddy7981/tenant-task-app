@@ -1,6 +1,6 @@
 .home {
   display: flex;
-  position: relative;
+
   background-color: #f8f4f4;
   height: 100vh;
   border-radius: 40px;
@@ -15,7 +15,7 @@
   border-left: 0px solid black;
   border-radius: 25px;
   background-color: #e5e5e5;
-  width: 80%;
+  width: 90%;
 }
 .home__sidebar > img {
   height: 30%;
@@ -78,9 +78,13 @@
 }
 
 .home__uploads {
+  display: flex;
+  flex-direction: column;
   border: 1px solid lightgray;
   height: 80%;
-  margin-top: 40px;
+  width: 100%;
+  margin-top: 40px !important;
+  margin: 0px auto;
   border-radius: 10px;
 }
 .home__mainTop {
@@ -115,10 +119,7 @@
   border-radius: 10px;
   padding: 8px;
 }
-.home__uploads {
-  display: flex;
-  flex-direction: column;
-}
+
 .home__uploadsMain {
   display: flex;
   margin-left: 20px;
@@ -136,8 +137,83 @@
 }
 .home__uploadsMain > h4 {
   color: gray;
+  margin-left: 40px !important;
 }
 .home__uploadsSub {
   display: flex;
   flex-direction: row;
+}
+@media only screen and (max-width: 600px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: none;
+  }
+  .home__sidebar {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .home__sidebar > img {
+    height: 160px;
+    width: 150px;
+  }
+  .home__main {
+    width: 100%;
+  }
+  .home__sidebarInfo {
+    margin: 0px auto;
+  }
+  .home__containerSub {
+    display: flex;
+    flex-direction: column;
+  }
+  .home__container {
+    padding: 40px;
+    height: 85%;
+    margin: 0px auto;
+    width: 80%;
+  }
+  .home__containerRight {
+    display: flex;
+    flex-direction: column;
+  }
+  .home__uploadsMain {
+    display: flex;
+    flex-direction: column;
+  }
+  .home__uploadsMainBottom {
+    margin: 10px 0px;
+  }
+  .home__uploads {
+    width: 70%;
+    padding: 10px;
+  }
+  .home__uploadsSub {
+    display: flex;
+    flex-direction: column;
+  }
+  .home__mainTop {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .home__mainTopLeft {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .home__mainTopRight {
+    width: 55%;
+    margin-top: 20px;
+  }
+  .home__mainTopLeft > h4 {
+    margin: 0px;
+    padding-top: 30px !important;
+  }
+  .home__mainTopRightInfo {
+    display: flex;
+  }
 }
